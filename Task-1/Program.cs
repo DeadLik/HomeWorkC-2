@@ -8,7 +8,14 @@
 
 Console.WriteLine("Введите трёхзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int result = OutputThreeDigit(number);
+
+if (number > 99 && number < 1000)
+{
+    int result = OutputThreeDigit(number);
+    Console.WriteLine(result);
+}
+else Console.WriteLine($"Введённое число {number} не является трёхзначным");
+
 
 int OutputThreeDigit(int num)
 {
@@ -16,4 +23,3 @@ int OutputThreeDigit(int num)
     return res;
 }
 
-Console.WriteLine(result);
